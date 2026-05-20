@@ -1,0 +1,19 @@
+{% extends 'basic_page.html' %} 
+{% block title %} Course List {% endblock %} 
+{% block content %} 
+<h1>Course List</h1> 
+<table border="1"> 
+    <tr> 
+        <th>Sub Code</th> 
+        <th>Sub Name</th> 
+        <th>Credits</th> 
+    </tr> 
+    {% for c in course_list1 %} 
+    <tr> 
+        <td>{{ c.coursecode }}</td> 
+        <td>{{ c.coursename }}</td> 
+        <td>{{ c.credits }}</td> 
+    </tr> 
+    {% endfor %} 
+</table> 
+{% endblock %}
